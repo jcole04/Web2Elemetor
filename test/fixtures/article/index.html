@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Waiting Well: The Quiet Craft of Loading States — Lanternfish Journal</title>
+  <meta name="description" content="What three years of interface research taught us about spinners, skeletons and the seconds people spend waiting.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="#top" aria-label="Lanternfish Journal home">
+      <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true">
+        <rect width="36" height="36" rx="10" fill="#2E5E56"/>
+        <path d="M18 7v4" stroke="#F3D9A4" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M11.5 15.5c0-2.5 2.9-4.5 6.5-4.5s6.5 2 6.5 4.5v8c0 2.5-2.9 4.5-6.5 4.5s-6.5-2-6.5-4.5z" fill="#F3D9A4"/>
+        <circle cx="18" cy="20" r="3.2" fill="#C46840"/>
+      </svg>
+      <span class="brand-name">Lanternfish<span class="brand-sub">Journal</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="#design" class="is-active">Design</a></li>
+        <li><a href="#engineering">Engineering</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#essays">Essays</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-subscribe" href="#newsletter">Subscribe</a>
+  </div>
+</header>
+
+<div class="page wrap" id="top">
+  <main class="article-col">
+    <article class="post">
+      <a class="category" href="#design">Interface Design</a>
+      <h1 class="post-title">Waiting well: the quiet craft of loading states</h1>
+
+      <div class="post-meta">
+        <img class="meta-avatar" src="img/author-mara.jpg" alt="Portrait of Mara Okafor" width="44" height="44">
+        <a class="meta-author" href="#author">Mara Okafor</a>
+        <span class="meta-sep" aria-hidden="true">·</span>
+        <time class="meta-date" datetime="2026-09-14">September 14, 2026</time>
+        <span class="meta-sep" aria-hidden="true">·</span>
+        <span class="meta-read">
+          <svg class="clock" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">
+            <circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M10 5.5V10l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          11 min read
+        </span>
+      </div>
+
+      <p class="lead">Every interface makes people wait. The difference between a product that feels fast and one that feels broken is rarely the number of milliseconds &mdash; it is what the screen says while those milliseconds pass.</p>
+
+      <figure class="figure-wide">
+        <img src="img/figure-skeleton.jpg" alt="Illustration of a card interface showing grey placeholder lines and a partly filled progress ring" width="1600" height="900">
+        <figcaption>A skeleton screen sketches the shape of what is coming, so the eye has somewhere to rest before the content arrives.</figcaption>
+      </figure>
+
+      <h2 id="why-waiting">Why waiting feels longer than it is</h2>
+      <p>Over three years we sat beside more than two hundred people as they used tools they relied on at work. We timed every pause. What surprised us was not how often they waited, but how poorly they guessed how long they had been waiting. A blank white screen held for <strong>two seconds</strong> was routinely described as &ldquo;ages&rdquo;, while a four-second load with visible progress was often not mentioned at all.</p>
+      <p>Psychologists call this <em>temporal distortion</em>, and it has a simple engine: uncertainty. When nothing on screen changes, people start doing the arithmetic of doubt. Did my click register? Is the network down? Should I press it again? Our job, as the <a href="#research">research team</a> put it in one of our early notes, is to remove the reasons for doubt rather than the wait itself.</p>
+
+      <img class="float-right" src="img/chart-wait.jpg" alt="Bar chart comparing actual wait time with perceived wait time across four loading patterns" width="560" height="680">
+      <p>The chart on the right compares the real duration of four loading patterns with how long participants believed they had waited. The sand-coloured bars are the clock; the green ones are the memory. In every pattern, giving people something to look at shrank the remembered wait, and in the best case it nearly halved it.</p>
+      <p>Spinners did the least to help. A spinner tells you that <em>something</em> is happening but nothing about <em>what</em> or <em>how much longer</em>. Determinate progress bars did better, and skeleton screens &mdash; grey outlines in the shape of the coming content &mdash; did best of all, because they let people start reading the layout before the words arrived.</p>
+      <p>None of this means the engineering work of making things faster is wasted. It means that speed and the <strong>feeling</strong> of speed are separate budgets, and most teams spend everything on the first one.</p>
+
+      <h2 id="patterns">Four patterns that earn their place</h2>
+      <p>After many rounds of testing we settled on a small vocabulary of loading states. Each one has a job, and each one has a moment when it is the wrong choice.</p>
+
+      <h3>Choosing the right indicator</h3>
+      <ol class="steps">
+        <li><strong>Under 300 ms:</strong> show nothing. An indicator that flashes on and off is more distracting than a short pause.</li>
+        <li><strong>300 ms to 2 s:</strong> use a skeleton or a subtle inline spinner next to the control the person touched.</li>
+        <li><strong>2 to 10 s:</strong> switch to determinate progress, and say what is happening in plain words.</li>
+        <li><strong>Over 10 s:</strong> let people leave. Move the work to the background and notify them when it is done.</li>
+      </ol>
+
+      <h3>What a good skeleton contains</h3>
+      <ul class="checklist">
+        <li>The real layout, not a generic placeholder
+          <ul>
+            <li>Same column widths and image ratios as the loaded page</li>
+            <li>Headings drawn shorter than body lines</li>
+          </ul>
+        </li>
+        <li>A gentle shimmer that moves in reading direction</li>
+        <li>Any content you already have, rendered immediately
+          <ul>
+            <li>Titles from the previous screen</li>
+            <li>Cached avatars and names</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h4>Optimistic updates, carefully</h4>
+      <p>The fastest loading state is the one you never show. When an action almost always succeeds &mdash; starring an item, ticking a task &mdash; update the interface first and confirm with the server afterwards. The helper below is the version we use, with the rollback path that people tend to forget. It wraps <code>fetch</code> and keeps the previous state in <code>snapshot</code> until the request settles.</p>
+
+      <pre class="code-block"><code>async function optimistic(store, change, request) {
+  const snapshot = store.get();
+  store.set(change(snapshot));          // show the result right away
+
+  try {
+    const saved = await request();
+    store.set(saved);                   // reconcile with the server
+  } catch (error) {
+    store.set(snapshot);                // roll back, then tell the person
+    toast(`Couldn't save: ${error.message}`);
+  }
+}</code></pre>
+
+      <blockquote class="pull-quote">
+        <p>&ldquo;People forgive a slow screen. What they don&rsquo;t forgive is a screen that makes them wonder whether it heard them.&rdquo;</p>
+        <cite>&mdash; Participant 47, logistics coordinator</cite>
+      </blockquote>
+
+      <h2 id="writing">Words are a loading state too</h2>
+      <p>The text beside an indicator does as much work as the indicator. &ldquo;Loading&hellip;&rdquo; is honest but empty. &ldquo;Fetching your last 30 days of orders&rdquo; tells people the system understood the request, sets an expectation of size, and gives them a reason to stay. Keep the sentence short, name the thing being loaded, and avoid jokes &mdash; they are charming once and grating by the tenth visit.</p>
+      <p>Finally, design the failure. A loading state that can only ever succeed is a promise the network cannot keep. Every skeleton needs a sibling that explains, in one line, what went wrong and what the person can do next.</p>
+
+      <hr class="rule">
+
+      <aside class="callout" role="note">
+        <p class="callout-title">A note on accessibility</p>
+        <p>Announce long waits to screen readers with a polite live region, and stop any shimmer animation when the visitor has asked for reduced motion. A skeleton that only works for sighted mouse users is still a blank screen for everyone else.</p>
+      </aside>
+
+      <div class="post-tags">
+        <span class="tags-label">Filed under</span>
+        <a class="tag" href="#t-ux">UX research</a>
+        <a class="tag" href="#t-perf">Performance</a>
+        <a class="tag" href="#t-micro">Microcopy</a>
+        <a class="tag" href="#t-a11y">Accessibility</a>
+      </div>
+
+      <section class="author-box" id="author">
+        <img class="author-avatar" src="img/author-mara.jpg" alt="Portrait of Mara Okafor" width="96" height="96">
+        <div class="author-body">
+          <p class="author-kicker">Written by</p>
+          <h3 class="author-name">Mara Okafor</h3>
+          <p class="author-bio">Mara leads interface research at Lanternfish. She spent a decade designing logistics software before deciding she would rather study why people trust it. She lives by the sea and owns too many notebooks.</p>
+          <ul class="author-social" aria-label="Find Mara elsewhere">
+            <li><a href="#site" aria-label="Personal website"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a></li>
+            <li><a href="#mail" aria-label="Email"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></a></li>
+            <li><a href="#feed" aria-label="RSS feed"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 11a8 8 0 0 1 8 8M5 5a14 14 0 0 1 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="6" cy="18" r="1.8" fill="currentColor"/></svg></a></li>
+          </ul>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <aside class="sidebar" aria-label="Sidebar">
+    <form class="widget search-widget" role="search" action="#search">
+      <label class="widget-title" for="q">Search the journal</label>
+      <div class="search-field">
+        <input id="q" type="search" name="q" placeholder="Try &ldquo;onboarding&rdquo;">
+        <button type="submit" aria-label="Search"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><circle cx="9" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="m13.5 13.5 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+    </form>
+
+    <section class="widget popular">
+      <h2 class="widget-title">Popular this month</h2>
+      <ul class="popular-list">
+        <li>
+          <a href="#p1"><img src="img/thumb-1.jpg" alt="" width="72" height="72"></a>
+          <div>
+            <a class="popular-title" href="#p1">The case against infinite scroll in work tools</a>
+            <span class="popular-date">Aug 28, 2026</span>
+          </div>
+        </li>
+        <li>
+          <a href="#p2"><img src="img/thumb-2.jpg" alt="" width="72" height="72"></a>
+          <div>
+            <a class="popular-title" href="#p2">Designing empty states that teach</a>
+            <span class="popular-date">Aug 12, 2026</span>
+          </div>
+        </li>
+        <li>
+          <a href="#p3"><img src="img/thumb-3.jpg" alt="" width="72" height="72"></a>
+          <div>
+            <a class="popular-title" href="#p3">How we run interviews with only one researcher</a>
+            <span class="popular-date">Jul 30, 2026</span>
+          </div>
+        </li>
+        <li>
+          <a href="#p4"><img src="img/thumb-4.jpg" alt="" width="72" height="72"></a>
+          <div>
+            <a class="popular-title" href="#p4">Error messages, rewritten by the people who read them</a>
+            <span class="popular-date">Jul 09, 2026</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="widget newsletter" id="newsletter">
+      <h2 class="newsletter-title">One calm email a month</h2>
+      <p class="newsletter-text">New essays and research notes, no tracking pixels, and an unsubscribe link that works on the first click.</p>
+      <form class="newsletter-form" action="#subscribe">
+        <input type="email" name="email" placeholder="you@example.com" aria-label="Email address">
+        <button class="btn btn-accent" type="submit">Subscribe</button>
+      </form>
+      <p class="newsletter-fine">Join 18,400 readers. Free, forever.</p>
+    </section>
+
+    <section class="widget tag-cloud-widget">
+      <h2 class="widget-title">Browse topics</h2>
+      <div class="tag-cloud">
+        <a href="#c1">Accessibility</a>
+        <a href="#c2">Onboarding</a>
+        <a href="#c3">Forms</a>
+        <a href="#c4">Navigation</a>
+        <a href="#c5">Microcopy</a>
+        <a href="#c6">Performance</a>
+        <a href="#c7">Research methods</a>
+        <a href="#c8">Dashboards</a>
+        <a href="#c9">Motion</a>
+        <a href="#c10">Typography</a>
+      </div>
+    </section>
+  </aside>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-about">
+      <a class="brand brand-footer" href="#top">
+        <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true">
+          <rect width="36" height="36" rx="10" fill="#F3D9A4"/>
+          <path d="M18 7v4" stroke="#2E5E56" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M11.5 15.5c0-2.5 2.9-4.5 6.5-4.5s6.5 2 6.5 4.5v8c0 2.5-2.9 4.5-6.5 4.5s-6.5-2-6.5-4.5z" fill="#2E5E56"/>
+          <circle cx="18" cy="20" r="3.2" fill="#C46840"/>
+        </svg>
+        <span class="brand-name">Lanternfish<span class="brand-sub">Journal</span></span>
+      </a>
+      <p>Slow, careful writing about the software people use every day. Published from a small studio by the harbour since 2019.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Sections</h3>
+      <ul>
+        <li><a href="#design">Design</a></li>
+        <li><a href="#engineering">Engineering</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#essays">Essays</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Journal</h3>
+      <ul>
+        <li><a href="#about">About us</a></li>
+        <li><a href="#write">Write for us</a></li>
+        <li><a href="#archive">Archive</a></li>
+        <li><a href="#feed">RSS feed</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Small print</h3>
+      <ul>
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#terms">Terms of use</a></li>
+        <li><a href="#colophon">Colophon</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>&copy; 2026 Lanternfish Journal. Text licensed CC BY-NC 4.0.</p>
+    <p>Set in Source Serif and Inter.</p>
+  </div>
+</footer>
+
+</body>
+</html>

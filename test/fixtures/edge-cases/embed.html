@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Echofield player</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body { font-family: Inter, Arial, sans-serif; background: #FFFFFF; color: #0E1225; padding: 20px; }
+  .player { display: flex; gap: 20px; align-items: center; height: 100%; }
+  .cover { width: 152px; height: 152px; border-radius: 14px; object-fit: cover; flex: none; }
+  .meta { flex: 1; min-width: 0; }
+  .show { font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #6D4AFF; margin: 0 0 6px; }
+  .title { font-family: Sora, Arial, sans-serif; font-size: 20px; font-weight: 700; line-height: 1.25; margin: 0 0 14px; }
+  .controls { display: flex; align-items: center; gap: 14px; }
+  .play { width: 44px; height: 44px; border-radius: 50%; background: #0E1225; display: grid; place-items: center; flex: none; }
+  .bar { flex: 1; height: 6px; background: #ECEAF4; border-radius: 3px; position: relative; }
+  .bar span { position: absolute; inset: 0 62% 0 0; background: linear-gradient(90deg, #6D4AFF, #FF6B5B); border-radius: 3px; }
+  .time { font-size: 13px; color: #5B6178; font-variant-numeric: tabular-nums; }
+  .foot { margin: 14px 0 0; font-size: 11px; color: #8A8FA3; }
+</style>
+</head>
+<body>
+  <div class="player">
+    <img class="cover" src="img/cover-5.jpg" alt="Low Orbit cover art">
+    <div class="meta">
+      <p class="show">Low Orbit · Episode 48</p>
+      <p class="title">The quiet economics of a weekly science show</p>
+      <div class="controls">
+        <span class="play"><svg width="16" height="18" viewBox="0 0 16 18"><path d="M2 1.5v15L15 9z" fill="#fff"/></svg></span>
+        <div class="bar"><span></span></div>
+        <span class="time">14:06 / 37:12</span>
+      </div>
+      <p class="foot">Played via the Echofield embeddable player</p>
+    </div>
+  </div>
+</body>
+</html>

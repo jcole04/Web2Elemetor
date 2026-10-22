@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Echofield — Podcast analytics that listen back</title>
+  <meta name="description" content="Echofield turns raw download logs into the story of your show: retention, geography and sponsor delivery in one place.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#top" aria-label="Echofield home">
+      <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true">
+        <rect width="36" height="36" rx="10" fill="#0E1225"/>
+        <circle cx="12" cy="24" r="3.2" fill="#FF6B5B"/>
+        <path d="M12 16.5a7.5 7.5 0 0 1 7.5 7.5" fill="none" stroke="#B9A9FF" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M12 10a14 14 0 0 1 14 14" fill="none" stroke="#6D4AFF" stroke-width="2.6" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">Echofield</span>
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="#product">Product</a>
+      <a href="#analytics">Analytics</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#stories">Stories</a>
+      <a href="#docs">Docs</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-pill btn-outline" href="#login">Log in</a>
+      <a class="btn btn-pill btn-dark" href="#start">
+        Start free
+        <svg class="ico" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <span class="blob blob-violet" aria-hidden="true"></span>
+    <span class="blob blob-coral" aria-hidden="true"></span>
+    <span class="blob blob-teal" aria-hidden="true"></span>
+    <div class="container hero-inner">
+      <p class="hero-badge"><span class="badge-dot"></span>New · Season reports for 2026</p>
+      <h1 class="display">Every listen, accounted for.</h1>
+      <p class="lead">Echofield turns raw download logs into the story of your show: who stayed, who skipped, and the exact minute that made them hit share.</p>
+      <div class="hero-actions">
+        <a class="btn btn-pill btn-primary btn-lg" href="#start">
+          <svg class="ico" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 6.5v7l5.5-3.5z" fill="currentColor"/></svg>
+          Start your free season
+        </a>
+        <a class="btn btn-pill btn-ghost btn-lg" href="#tour">
+          Book a walkthrough
+          <svg class="ico" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="social-proof">
+        <div class="avatar-stack">
+          <img src="img/avatar-1.jpg" alt="Portrait of a host">
+          <img src="img/avatar-2.jpg" alt="Portrait of a producer">
+          <img src="img/avatar-3.jpg" alt="Portrait of a host">
+          <img src="img/avatar-4.jpg" alt="Portrait of an editor">
+          <img src="img/avatar-5.jpg" alt="Portrait of a host">
+        </div>
+        <p class="proof-text"><strong>12,400 independent hosts</strong> moved their numbers here this year</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-section" aria-label="Results">
+    <div class="container">
+      <div class="stats-card">
+        <div class="stat">
+          <span class="stat-value gradient-text">38%</span>
+          <span class="stat-label">longer average listen</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value gradient-text">2.4×</span>
+          <span class="stat-label">faster sponsor reports</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value gradient-text">11 min</span>
+          <span class="stat-label">to your first insight</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value gradient-text">99.97%</span>
+          <span class="stat-label">collection uptime in 2025</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="logos">
+    <div class="container">
+      <p class="label">Trusted by networks and indie studios alike</p>
+      <div class="logo-row">
+        <img src="img/logos/northwave.svg" alt="Northwave" width="168" height="40">
+        <img src="img/logos/tinbox.svg" alt="Tinbox" width="132" height="40">
+        <img src="img/logos/lantern.svg" alt="Lantern FM" width="158" height="40">
+        <img src="img/logos/driftcast.svg" alt="Driftcast" width="150" height="40">
+        <img src="img/logos/kiln.svg" alt="Kiln Audio" width="146" height="40">
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="product">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow eyebrow-bar">The dashboard</p>
+        <h2 class="h2">Built for shows that <span class="accent">grow every week</span></h2>
+        <p class="section-sub">One home for downloads, retention, audience geography and sponsor delivery, refreshed every fifteen minutes.</p>
+      </div>
+
+      <div class="bento" id="analytics">
+        <article class="card card-growth">
+          <p class="card-label">Listener growth</p>
+          <h3 class="card-title">184,220 new listeners this quarter</h3>
+          <div class="mini-stats">
+            <div class="mini-stat"><span class="mini-value">15.4k</span><span class="mini-label">Weekly average</span></div>
+            <div class="mini-stat"><span class="mini-value">21.4k</span><span class="mini-label">Best week</span></div>
+            <div class="mini-stat"><span class="mini-value mini-up">+118%</span><span class="mini-label">vs. last quarter</span></div>
+          </div>
+          <canvas id="growth-chart" class="chart-canvas" width="1280" height="900" aria-label="Line chart of weekly unique listeners over 12 weeks, rising from 9,800 to 21,400"></canvas>
+          <p class="card-note">Weekly unique listeners, last 12 weeks</p>
+        </article>
+
+        <article class="card card-retention">
+          <p class="card-label">Completion</p>
+          <h3 class="card-title">72% finish the episode</h3>
+          <svg class="donut" viewBox="0 0 160 160" role="img" aria-label="Donut chart: 72 percent completed, 18 percent dropped after the midpoint, 10 percent dropped in the intro">
+            <circle cx="80" cy="80" r="62" fill="none" stroke="#ECEAF4" stroke-width="20"/>
+            <circle cx="80" cy="80" r="62" fill="none" stroke="#6D4AFF" stroke-width="20" stroke-dasharray="280.5 389.6" transform="rotate(-90 80 80)"/>
+            <circle cx="80" cy="80" r="62" fill="none" stroke="#FF6B5B" stroke-width="20" stroke-dasharray="70.1 389.6" stroke-dashoffset="-280.5" transform="rotate(-90 80 80)"/>
+            <circle cx="80" cy="80" r="62" fill="none" stroke="#19C2B0" stroke-width="20" stroke-dasharray="39 389.6" stroke-dashoffset="-350.6" transform="rotate(-90 80 80)"/>
+            <text x="80" y="88" text-anchor="middle" font-family="Sora, Arial, sans-serif" font-size="26" font-weight="700" fill="#0E1225">72%</text>
+          </svg>
+          <ul class="legend">
+            <li><span class="swatch sw-violet"></span>Finished</li>
+            <li><span class="swatch sw-coral"></span>Left after midpoint</li>
+            <li><span class="swatch sw-teal"></span>Left in intro</li>
+          </ul>
+        </article>
+
+        <article class="card card-regions">
+          <p class="card-label">Top regions</p>
+          <h3 class="card-title">Where they tune in</h3>
+          <div class="region">
+            <div class="region-row"><span>Lisbon metro</span><span>24%</span></div>
+            <div class="meter"><span style="width:90%"></span></div>
+          </div>
+          <div class="region">
+            <div class="region-row"><span>Greater Toronto</span><span>18%</span></div>
+            <div class="meter"><span style="width:68%"></span></div>
+          </div>
+          <div class="region">
+            <div class="region-row"><span>Nairobi</span><span>12%</span></div>
+            <div class="meter"><span style="width:45%"></span></div>
+          </div>
+          <div class="region">
+            <div class="region-row"><span>Melbourne</span><span>9%</span></div>
+            <div class="meter"><span style="width:34%"></span></div>
+          </div>
+        </article>
+
+        <article class="card card-sample">
+          <div class="sample-copy">
+            <p class="card-label">Sample episode</p>
+            <h3 class="card-title">Hear what a 72% episode sounds like</h3>
+            <p class="card-text">A six-minute cut from <em>Low Orbit</em>, annotated with the moments where listeners rewound.</p>
+          </div>
+          <audio class="sample-audio" controls preload="none" src="media/low-orbit-sample.mp3">Your browser does not support audio playback.</audio>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="integrations">
+    <div class="container integrations-grid">
+      <div class="integrations-copy">
+        <p class="eyebrow">Integrations</p>
+        <h2 class="h2 h2-sm">Plugs into the tools your team already opens</h2>
+        <p class="body-lg">Send numbers where decisions happen. Every connector is included on every plan, with no per-seat surprises.</p>
+        <div class="chips">
+          <span class="chip">RSS 2.0</span>
+          <span class="chip">Private member feeds</span>
+          <span class="chip chip-hot">Dynamic ad insertion</span>
+          <span class="chip">Transcripts</span>
+          <span class="chip">Chapters</span>
+          <span class="chip">Webhooks</span>
+          <span class="chip">CSV &amp; spreadsheet export</span>
+          <span class="chip chip-hot">Sponsor portal</span>
+          <span class="chip">Certified download counts</span>
+          <span class="chip">Team alerts</span>
+        </div>
+      </div>
+      <aside class="callout">
+        <p class="callout-quote">We dropped two spreadsheets and a Monday meeting. Our sponsor recap now writes itself before the coffee is ready.</p>
+        <div class="callout-author">
+          <img src="img/avatar-3.jpg" alt="Portrait of Maya Okafor" class="callout-avatar">
+          <div>
+            <p class="callout-name">Maya Okafor</p>
+            <p class="callout-role">Producer, Night Shift Radio</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="tour" id="tour">
+    <div class="container tour-grid">
+      <div class="tour-copy">
+        <p class="eyebrow eyebrow-light">Product tour</p>
+        <h2 class="h2 h2-light">See a season come together in two minutes</h2>
+        <p class="tour-text">Follow one episode from upload to sponsor report: the retention curve, the drop-off map and the share spikes, all on one screen.</p>
+        <ul class="checks">
+          <li>
+            <svg class="check" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#19C2B0"/><path d="M6 10.5l2.6 2.5L14 7.5" fill="none" stroke="#0E1225" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Minute-by-minute retention for every episode</span>
+          </li>
+          <li>
+            <svg class="check" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#19C2B0"/><path d="M6 10.5l2.6 2.5L14 7.5" fill="none" stroke="#0E1225" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Sponsor delivery reports in one click</span>
+          </li>
+          <li>
+            <svg class="check" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#19C2B0"/><path d="M6 10.5l2.6 2.5L14 7.5" fill="none" stroke="#0E1225" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Alerts when an episode outperforms the season</span>
+          </li>
+        </ul>
+      </div>
+      <div class="video-frame">
+        <video class="tour-video" controls preload="none" poster="img/poster.jpg" width="1280" height="720">
+          <source src="media/echofield-tour.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <section class="shows" id="stories">
+    <div class="container">
+      <div class="shows-head">
+        <div>
+          <p class="eyebrow eyebrow-bar">Stories</p>
+          <h2 class="h2 h2-sm">Shows growing on Echofield</h2>
+        </div>
+        <a class="link-arrow" href="#stories">Read their stories →</a>
+      </div>
+      <div class="covers">
+        <figure class="cover">
+          <img src="img/cover-1.jpg" alt="Night Shift Radio cover art">
+          <figcaption><span class="cover-title">Night Shift Radio</span><span class="cover-meta">Weekly · Culture</span></figcaption>
+        </figure>
+        <figure class="cover">
+          <img src="img/cover-2.jpg" alt="Field Notes cover art">
+          <figcaption><span class="cover-title">Field Notes</span><span class="cover-meta">Biweekly · Nature</span></figcaption>
+        </figure>
+        <figure class="cover">
+          <img src="img/cover-3.jpg" alt="Small Hours cover art">
+          <figcaption><span class="cover-title">Small Hours</span><span class="cover-meta">Daily · News</span></figcaption>
+        </figure>
+        <figure class="cover">
+          <img src="img/cover-4.jpg" alt="Second Draft cover art">
+          <figcaption><span class="cover-title">Second Draft</span><span class="cover-meta">Weekly · Writing</span></figcaption>
+        </figure>
+        <figure class="cover">
+          <img src="img/cover-5.jpg" alt="Low Orbit cover art">
+          <figcaption><span class="cover-title">Low Orbit</span><span class="cover-meta">Weekly · Science</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-band">
+    <div class="container quote-inner">
+      <blockquote class="big-quote">
+        <p>The first analytics tool that tells us <em>why</em> people listen, not just how many.</p>
+        <footer class="quote-cite">Priya Raman <span>·</span> Head of Audio, Lowtide Media</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="embed">
+    <div class="container embed-grid">
+      <div class="embed-copy">
+        <p class="eyebrow">Embeddable player</p>
+        <h2 class="h2 h2-sm">Drop your episodes onto any page</h2>
+        <p class="body-lg">The player reports plays straight back to your dashboard, so listens on your own site count just like the apps.</p>
+        <a class="btn btn-pill btn-outline-violet" href="#embed">
+          <svg class="ico" viewBox="0 0 20 20" aria-hidden="true"><path d="M7 6l-4 4 4 4M13 6l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Copy embed code
+        </a>
+      </div>
+      <div class="embed-frame">
+        <iframe src="embed.html" title="Echofield embeddable player preview" loading="eager"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-head section-head-center">
+        <p class="eyebrow">Pricing</p>
+        <h2 class="h2">Simple plans, <span class="accent">honest numbers</span></h2>
+      </div>
+      <div class="plans">
+        <div class="plan">
+          <p class="plan-name">Starter</p>
+          <p class="plan-price">$0<span>/mo</span></p>
+          <p class="plan-desc">For a first show finding its listeners.</p>
+          <ul class="plan-list">
+            <li>1 show, unlimited episodes</li>
+            <li>90 days of history</li>
+            <li>Embeddable player</li>
+          </ul>
+          <a class="btn btn-block btn-outline" href="#start">Start for free</a>
+        </div>
+        <div class="plan plan-featured">
+          <span class="plan-badge">Most popular</span>
+          <p class="plan-name">Studio</p>
+          <p class="plan-price">$29<span>/mo</span></p>
+          <p class="plan-desc">For weekly shows with sponsors to report to.</p>
+          <ul class="plan-list">
+            <li>5 shows, unlimited episodes</li>
+            <li>Full history and exports</li>
+            <li>Sponsor portal and alerts</li>
+          </ul>
+          <a class="btn btn-block btn-primary" href="#start">Choose Studio</a>
+        </div>
+        <div class="plan">
+          <p class="plan-name">Network</p>
+          <p class="plan-price">$119<span>/mo</span></p>
+          <p class="plan-desc">For studios running a slate of shows.</p>
+          <ul class="plan-list">
+            <li>Unlimited shows</li>
+            <li>Single sign-on and roles</li>
+            <li>Dedicated success lead</li>
+          </ul>
+          <a class="btn btn-block btn-outline" href="#sales">Talk to sales</a>
+        </div>
+      </div>
+      <p class="fine-print">Prices in US dollars per month, billed annually. Download counts follow our published measurement guidelines. Plans renew automatically; cancel any time from Settings.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <p class="footer-logo">Echofield</p>
+        <p class="footer-tag">Podcast analytics that listen back. Made by a small team in Porto and Halifax.</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-head">Product</p>
+        <a href="#product">Dashboard</a>
+        <a href="#embed">Player</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-head">Company</p>
+        <a href="#about">About</a>
+        <a href="#careers">Careers</a>
+        <a href="#press">Press kit</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-head">Resources</p>
+        <a href="#docs">Docs</a>
+        <a href="#guides">Measurement guide</a>
+        <a href="#status">Status</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="legal">© 2026 Echofield Audio Ltd. All rights reserved. Registered in Portugal, NIF 500 000 000.</p>
+      <p class="legal legal-links"><a href="#privacy">Privacy</a> · <a href="#terms">Terms</a> · <a href="#cookies">Cookies</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Simple area chart on the growth canvas.
+  (function () {
+    var c = document.getElementById('growth-chart');
+    if (!c || !c.getContext) return;
+    var x = c.getContext('2d');
+    var W = c.width, H = c.height, pad = { l: 84, r: 24, t: 24, b: 56 };
+    var data = [9800, 10400, 11200, 10900, 12600, 13800, 14100, 15900, 17200, 18100, 19800, 21400];
+    var max = 24000;
+    var px = function (i) { return pad.l + (i / (data.length - 1)) * (W - pad.l - pad.r); };
+    var py = function (v) { return pad.t + (1 - v / max) * (H - pad.t - pad.b); };
+    x.font = '500 22px Inter, Arial, sans-serif';
+    x.fillStyle = '#8A8FA3';
+    x.strokeStyle = '#ECEAF4';
+    x.lineWidth = 2;
+    [0, 6000, 12000, 18000, 24000].forEach(function (v) {
+      x.beginPath(); x.moveTo(pad.l, py(v)); x.lineTo(W - pad.r, py(v)); x.stroke();
+      x.fillText(v ? (v / 1000) + 'k' : '0', 18, py(v) + 8);
+    });
+    data.forEach(function (_, i) { if (i % 2 === 0) x.fillText('W' + (i + 1), px(i) - 16, H - 16); });
+    var g = x.createLinearGradient(0, pad.t, 0, H - pad.b);
+    g.addColorStop(0, 'rgba(109,74,255,0.35)');
+    g.addColorStop(1, 'rgba(109,74,255,0)');
+    x.beginPath();
+    data.forEach(function (v, i) { i ? x.lineTo(px(i), py(v)) : x.moveTo(px(i), py(v)); });
+    x.lineTo(px(data.length - 1), py(0)); x.lineTo(px(0), py(0)); x.closePath();
+    x.fillStyle = g; x.fill();
+    x.beginPath();
+    data.forEach(function (v, i) { i ? x.lineTo(px(i), py(v)) : x.moveTo(px(i), py(v)); });
+    x.strokeStyle = '#6D4AFF'; x.lineWidth = 5; x.lineJoin = 'round'; x.stroke();
+    var last = data.length - 1;
+    x.beginPath(); x.arc(px(last), py(data[last]), 10, 0, Math.PI * 2);
+    x.fillStyle = '#FFFFFF'; x.fill(); x.lineWidth = 5; x.stroke();
+  })();
+</script>
+</body>
+</html>

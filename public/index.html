@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Web to Elementor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="mark">W→E</span> Web to Elementor</div>
+  <p class="tag">Turn a link, HTML, screenshot or PDF into an Elementor template you can import.</p>
+</header>
+
+<main>
+  <form id="form" class="panel" novalidate>
+    <div class="tabs" role="tablist">
+      <button type="button" role="tab" data-type="url" aria-selected="true">Link</button>
+      <button type="button" role="tab" data-type="html" aria-selected="false">HTML</button>
+      <button type="button" role="tab" data-type="image" aria-selected="false">Screenshot</button>
+      <button type="button" role="tab" data-type="pdf" aria-selected="false">PDF</button>
+    </div>
+
+    <section data-pane="url">
+      <label for="url">Page address</label>
+      <input id="url" name="url" type="url" placeholder="https://example.com" autocomplete="off">
+      <p class="hint">The page is opened in a real browser and its actual fonts, sizes, colours and spacing are measured.</p>
+    </section>
+
+    <section data-pane="html" hidden>
+      <label for="html">Paste HTML</label>
+      <textarea id="html" name="html" rows="9" spellcheck="false" placeholder="<!doctype html>…"></textarea>
+      <div class="row">
+        <label class="file">or upload an .html file <input type="file" id="htmlFile" accept=".html,.htm,text/html"></label>
+      </div>
+      <label for="baseUrl">Site address for relative links and stylesheets <span class="opt">(optional)</span></label>
+      <input id="baseUrl" name="baseUrl" type="url" placeholder="https://example.com/">
+    </section>
+
+    <section data-pane="image" hidden>
+      <div class="drop" id="dropImage" tabindex="0">
+        <strong>Drop a screenshot here, paste it (Ctrl+V), or click to choose</strong>
+        <span>PNG, JPEG or WebP. A full-page desktop screenshot works best.</span>
+        <input type="file" id="imageFile" accept="image/png,image/jpeg,image/webp,image/gif" hidden>
+        <img id="imagePreview" alt="" hidden>
+      </div>
+    </section>
+
+    <section data-pane="pdf" hidden>
+      <div class="drop" id="dropPdf" tabindex="0">
+        <strong>Drop a PDF here or click to choose</strong>
+        <span>Each page is rebuilt as part of one long Elementor page.</span>
+        <input type="file" id="pdfFile" accept="application/pdf" hidden>
+        <span id="pdfName" class="filename"></span>
+      </div>
+    </section>
+
+    <fieldset class="rights">
+      <legend>Copyright</legend>
+      <p>By default only the <em>design</em> is copied: layout, spacing, colours and type. Text is replaced with placeholder copy, images with grey boxes, and paid fonts with free look-alikes.</p>
+      <label class="check"><input type="checkbox" id="rights"> <span>I own this design or have permission to reuse its content</span></label>
+      <div class="keep" id="keepOpts" aria-disabled="true">
+        <label class="check"><input type="checkbox" id="keepText" disabled> Keep the original text</label>
+        <label class="check"><input type="checkbox" id="keepImages" disabled> <span>Keep the original images <span class="opt">(links and HTML only)</span></span></label>
+      </div>
+    </fieldset>
+
+    <details class="more">
+      <summary>More options</summary>
+      <label for="title">Template name</label>
+      <input id="title" type="text" placeholder="Taken from the page title">
+      <label for="pageTemplate">Page layout after import</label>
+      <select id="pageTemplate">
+        <option value="elementor_canvas">Elementor Canvas (no theme header or footer)</option>
+        <option value="elementor_header_footer">Elementor Full Width (keep theme header and footer)</option>
+        <option value="default">Theme default</option>
+      </select>
+    </details>
+
+    <button class="go" type="submit" id="go">Create Elementor template</button>
+    <p class="error" id="error" role="alert" hidden></p>
+  </form>
+
+  <section class="result panel" id="result" hidden>
+    <div class="result-head">
+      <div>
+        <h2 id="resultTitle">Template ready</h2>
+        <p class="hint" id="resultMeta"></p>
+      </div>
+      <a class="go small" id="download" download>Download .json</a>
+    </div>
+    <ul class="notes" id="notes"></ul>
+    <div class="viewbar">
+      <span>Preview</span>
+      <div class="seg">
+        <button type="button" data-w="1440" aria-pressed="true">Desktop</button>
+        <button type="button" data-w="390" aria-pressed="false">Phone</button>
+      </div>
+    </div>
+    <div class="frame-wrap"><iframe id="preview" title="Template preview" sandbox="allow-same-origin"></iframe></div>
+    <details class="howto">
+      <summary>How to import into WordPress</summary>
+      <ol>
+        <li>In WordPress go to <strong>Templates › Saved Templates</strong> (or <strong>Elementor › Templates</strong>).</li>
+        <li>Click <strong>Import Templates</strong>, choose the downloaded .json file and click <strong>Import Now</strong>.</li>
+        <li>Open any page with Elementor, click the folder icon, open <strong>My Templates</strong> and insert it.</li>
+      </ol>
+      <p class="hint">Needs Elementor 3.6 or newer with Flexbox Containers turned on (the default on new sites).</p>
+    </details>
+  </section>
+</main>
+
+<div class="busy" id="busy" hidden><div class="spinner"></div><p id="busyText">Measuring the page…</p></div>
+<script src="app.js"></script>
+</body>
+</html>

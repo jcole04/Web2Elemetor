@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fernhollow — Houseplant subscription boxes</title>
+  <meta name="description" content="Fernhollow sends healthy, nursery-grown houseplants to your door every month, with pots, food and a plant doctor on call.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/theme.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-white border-bottom py-3">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+      <img src="img/logo.svg" alt="" width="36" height="36">
+      <span>Fernhollow</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#boxes">Subscriptions</a></li>
+        <li class="nav-item"><a class="nav-link" href="#library">Shop plants</a></li>
+        <li class="nav-item"><a class="nav-link" href="#care">Care guides</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Journal</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3">
+        <a class="link-secondary text-decoration-none fw-medium" href="#">Sign in</a>
+        <a class="btn btn-primary px-4" href="#boxes">Start a box</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Breadcrumb -->
+<div class="bg-body-tertiary border-bottom">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0 py-2 small">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Shop</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Monthly subscriptions</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="hero py-5 text-center">
+  <div class="container py-lg-4">
+    <div class="col-lg-8 mx-auto">
+      <span class="badge rounded-pill text-bg-light border px-3 py-2 mb-4 fw-medium">New &middot; Autumn boxes are shipping now</span>
+      <h1 class="display-4 mb-4">Houseplants that arrive happy and stay that way</h1>
+      <p class="lead mb-4">Every month we send two or three nursery-grown plants, a pot that fits, slow-release food and a care card written by the grower. Pause, skip or swap whenever you like.</p>
+      <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+        <a href="#boxes" class="btn btn-primary btn-lg px-4">Build your box</a>
+        <a href="#care" class="btn btn-outline-secondary btn-lg px-4">See how it works</a>
+      </div>
+      <p class="small text-body-secondary mt-4 mb-0">Free delivery on orders over $40 &middot; 30-day thrive guarantee &middot; Cancel anytime</p>
+    </div>
+  </div>
+</section>
+
+<!-- Alerts -->
+<section class="pt-5">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="alert alert-success d-flex align-items-start gap-3 mb-0" role="alert">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true" class="flex-shrink-0 mt-1">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.02L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+          </svg>
+          <div><strong>Autumn boxes ship October 28.</strong> Order by Sunday night and yours goes out in the first wave.</div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="alert alert-warning alert-dismissible d-flex align-items-start gap-3 mb-0" role="alert">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true" class="flex-shrink-0 mt-1">
+            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+          </svg>
+          <div><strong>Cold snap ahead.</strong> From November we add insulated wrap to every box. <a href="#" class="alert-link">Shipping details</a></div>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Cards -->
+<section id="boxes" class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="eyebrow">Monthly boxes</span>
+      <h2 class="display-6 mb-3">Pick a box, we&rsquo;ll handle the rest</h2>
+      <p class="text-body-secondary col-lg-6 mx-auto mb-0">Three boxes, each curated by our growers for a different kind of home. Every plant is acclimatised for indoor light before it ships.</p>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="img/box-starter.jpg" class="card-img-top" alt="Three small potted plants on a wooden shelf">
+          <div class="card-body p-4">
+            <span class="badge text-bg-success mb-3">Beginner friendly</span>
+            <h5 class="card-title">The Starter Shelf</h5>
+            <p class="card-text text-body-secondary">Forgiving, fast-growing plants that tell you what they need. Ideal for a first apartment or a bright desk.</p>
+          </div>
+          <div class="card-footer d-flex justify-content-between align-items-center px-4 py-3">
+            <span class="price">$29 <small>/ month</small></span>
+            <a href="#" class="btn btn-outline-primary btn-sm px-3">Choose</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 shadow-sm border-success">
+          <img src="img/box-collector.jpg" class="card-img-top" alt="A large leafy plant in a cream pot">
+          <div class="card-body p-4">
+            <span class="badge text-bg-warning mb-3">Most popular</span>
+            <h5 class="card-title">The Collector</h5>
+            <p class="card-text text-body-secondary">Statement foliage and rarer cultivars, sourced from small nurseries. Comes with a glazed stoneware pot.</p>
+          </div>
+          <div class="card-footer d-flex justify-content-between align-items-center px-4 py-3">
+            <span class="price">$49 <small>/ month</small></span>
+            <a href="#" class="btn btn-primary btn-sm px-3">Choose</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="img/box-pet.jpg" class="card-img-top" alt="A pet-safe plant next to a sleeping cat">
+          <div class="card-body p-4">
+            <span class="badge text-bg-info mb-3">Pet safe</span>
+            <h5 class="card-title">The Pet Parent</h5>
+            <p class="card-text text-body-secondary">Every plant is non-toxic to cats and dogs, so curious noses and leafy greens can share the same sill.</p>
+          </div>
+          <div class="card-footer d-flex justify-content-between align-items-center px-4 py-3">
+            <span class="price">$35 <small>/ month</small></span>
+            <a href="#" class="btn btn-outline-primary btn-sm px-3">Choose</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- List group + progress -->
+<section class="section-tint py-5">
+  <div class="container py-lg-3">
+    <div class="row g-4 g-lg-5 align-items-start">
+      <div class="col-lg-5">
+        <span class="eyebrow">What you get</span>
+        <h3 class="h2 mb-4">Inside every box</h3>
+        <ul class="list-group shadow-sm">
+          <li class="list-group-item d-flex justify-content-between align-items-center py-3">Two or three potted plants <span class="badge text-bg-primary rounded-pill">2&ndash;3</span></li>
+          <li class="list-group-item d-flex justify-content-between align-items-center py-3">Ceramic or recycled pots <span class="badge text-bg-primary rounded-pill">Included</span></li>
+          <li class="list-group-item d-flex justify-content-between align-items-center py-3">Slow-release plant food <span class="badge text-bg-primary rounded-pill">6 months</span></li>
+          <li class="list-group-item d-flex justify-content-between align-items-center py-3">Care cards from the grower <span class="badge text-bg-secondary rounded-pill">Printed</span></li>
+          <li class="list-group-item d-flex justify-content-between align-items-center py-3">Plant doctor chat <span class="badge text-bg-danger rounded-pill">24/7</span></li>
+        </ul>
+      </div>
+      <div class="col-lg-7">
+        <span class="eyebrow">Member results</span>
+        <h3 class="h2 mb-3">How our plants are doing</h3>
+        <p class="text-body-secondary mb-4">We check in with members after one, three and six months. Here is what the last 2,400 check-ins told us.</p>
+        <div class="mb-4">
+          <div class="d-flex justify-content-between small fw-semibold mb-2"><span>Still thriving after six months</span><span>94%</span></div>
+          <div class="progress" role="progressbar" aria-label="Still thriving" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar bg-success" style="width: 94%"></div>
+          </div>
+        </div>
+        <div class="mb-4">
+          <div class="d-flex justify-content-between small fw-semibold mb-2"><span>Repotted at least once</span><span>61%</span></div>
+          <div class="progress" role="progressbar" aria-label="Repotted" aria-valuenow="61" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 61%"></div>
+          </div>
+        </div>
+        <div class="mb-4">
+          <div class="d-flex justify-content-between small fw-semibold mb-2"><span>Propagated a cutting</span><span>38%</span></div>
+          <div class="progress" role="progressbar" aria-label="Propagated" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar bg-warning" style="width: 38%"></div>
+          </div>
+        </div>
+        <div>
+          <div class="d-flex justify-content-between small fw-semibold mb-2"><span>Members who renewed for a second year</span></div>
+          <div class="progress progress-lg" role="progressbar" aria-label="Renewed" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar progress-bar-striped bg-info text-dark" style="width: 72%">72% renewed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tabs + accordion -->
+<section id="care" class="py-5">
+  <div class="container py-lg-3">
+    <div class="row g-4 g-lg-5">
+      <div class="col-lg-6">
+        <span class="eyebrow">Care guides</span>
+        <h3 class="h2 mb-4">The four basics</h3>
+        <ul class="nav nav-tabs" id="careTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="light-tab" data-bs-toggle="tab" data-bs-target="#light" type="button" role="tab" aria-controls="light" aria-selected="true">Light</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="water-tab" data-bs-toggle="tab" data-bs-target="#water" type="button" role="tab" aria-controls="water" aria-selected="false">Water</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="soil-tab" data-bs-toggle="tab" data-bs-target="#soil" type="button" role="tab" aria-controls="soil" aria-selected="false">Soil</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="humidity-tab" data-bs-toggle="tab" data-bs-target="#humidity" type="button" role="tab" aria-controls="humidity" aria-selected="false">Humidity</button>
+          </li>
+        </ul>
+        <div class="tab-content border border-top-0 rounded-bottom bg-white p-4" id="careTabsContent">
+          <div class="tab-pane fade show active" id="light" role="tabpanel" aria-labelledby="light-tab" tabindex="0">
+            <h5 class="mb-3">Read the room before you place a plant</h5>
+            <p>Most houseplants want bright, indirect light: close enough to a window to see the sky, but out of the harsh midday beam. A sheer curtain makes almost any sunny window work.</p>
+            <ul class="mb-0">
+              <li>North-facing rooms suit ferns, calatheas and snake plants.</li>
+              <li>East and west windows are the sweet spot for most foliage.</li>
+              <li>South-facing sills are for cacti, succulents and citrus.</li>
+            </ul>
+          </div>
+          <div class="tab-pane fade" id="water" role="tabpanel" aria-labelledby="water-tab" tabindex="0">
+            <p class="mb-0">Water when the top two centimetres of soil are dry, then water thoroughly until it drains.</p>
+          </div>
+          <div class="tab-pane fade" id="soil" role="tabpanel" aria-labelledby="soil-tab" tabindex="0">
+            <p class="mb-0">Our pots ship with a chunky, peat-free mix that drains quickly and holds air around the roots.</p>
+          </div>
+          <div class="tab-pane fade" id="humidity" role="tabpanel" aria-labelledby="humidity-tab" tabindex="0">
+            <p class="mb-0">Group tropical plants together or set them on a pebble tray to raise humidity in winter.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <span class="eyebrow">FAQ</span>
+        <h3 class="h2 mb-4">Questions, answered</h3>
+        <div class="accordion" id="faq">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">What happens if a plant arrives damaged?</button>
+            </h2>
+            <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faq">
+              <div class="accordion-body">Send us a photo within seven days and we will ship a replacement at no cost. Our <strong>30-day thrive guarantee</strong> also covers plants that struggle in their first month.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">Can I choose which plants I receive?</button>
+            </h2>
+            <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faq">
+              <div class="accordion-body">Yes. Your account shows next month&rsquo;s picks a week early, and you can swap any plant for one from the library.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">How are the boxes packed?</button>
+            </h2>
+            <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faq">
+              <div class="accordion-body">Plastic-free: recycled cardboard, paper tape and compostable sleeves around every pot.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour">Can I pause my subscription?</button>
+            </h2>
+            <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faq">
+              <div class="accordion-body">Pause for up to three months at a time from your account page. No fees, no questions.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Table + pagination -->
+<section id="library" class="section-cream py-5 border-top">
+  <div class="container py-lg-3">
+    <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+      <div>
+        <span class="eyebrow">Plant library</span>
+        <h3 class="h2 mb-0">Add a plant to any box</h3>
+      </div>
+      <p class="text-body-secondary mb-0">Prices include a matching pot and care card.</p>
+    </div>
+    <div class="table-responsive bg-white rounded-3 border shadow-sm">
+      <table class="table table-striped align-middle mb-0">
+        <thead>
+          <tr>
+            <th scope="col" class="ps-4">Plant</th>
+            <th scope="col">Light</th>
+            <th scope="col">Water every</th>
+            <th scope="col">Pet safe</th>
+            <th scope="col">Difficulty</th>
+            <th scope="col" class="text-end pe-4">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ps-4 fw-semibold">Golden pothos</td>
+            <td>Low to bright</td>
+            <td>7&ndash;10 days</td>
+            <td><span class="badge text-bg-danger">No</span></td>
+            <td><span class="badge rounded-pill text-bg-light border">Easy</span></td>
+            <td class="text-end pe-4">$18</td>
+          </tr>
+          <tr>
+            <td class="ps-4 fw-semibold">Calathea orbifolia</td>
+            <td>Medium, indirect</td>
+            <td>5&ndash;7 days</td>
+            <td><span class="badge text-bg-success">Yes</span></td>
+            <td><span class="badge rounded-pill text-bg-light border">Fussy</span></td>
+            <td class="text-end pe-4">$32</td>
+          </tr>
+          <tr>
+            <td class="ps-4 fw-semibold">Snake plant</td>
+            <td>Low to bright</td>
+            <td>2&ndash;3 weeks</td>
+            <td><span class="badge text-bg-danger">No</span></td>
+            <td><span class="badge rounded-pill text-bg-light border">Easy</span></td>
+            <td class="text-end pe-4">$24</td>
+          </tr>
+          <tr>
+            <td class="ps-4 fw-semibold">Boston fern</td>
+            <td>Medium</td>
+            <td>3&ndash;4 days</td>
+            <td><span class="badge text-bg-success">Yes</span></td>
+            <td><span class="badge rounded-pill text-bg-light border">Moderate</span></td>
+            <td class="text-end pe-4">$22</td>
+          </tr>
+          <tr>
+            <td class="ps-4 fw-semibold">Fiddle-leaf fig</td>
+            <td>Bright, indirect</td>
+            <td>7 days</td>
+            <td><span class="badge text-bg-danger">No</span></td>
+            <td><span class="badge rounded-pill text-bg-light border">Fussy</span></td>
+            <td class="text-end pe-4">$58</td>
+          </tr>
+          <tr>
+            <td class="ps-4 fw-semibold">Parlour palm</td>
+            <td>Low to medium</td>
+            <td>7&ndash;10 days</td>
+            <td><span class="badge text-bg-success">Yes</span></td>
+            <td><span class="badge rounded-pill text-bg-light border">Easy</span></td>
+            <td class="text-end pe-4">$26</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mt-4">
+      <p class="small text-body-secondary mb-0">Showing 1&ndash;6 of 48 plants</p>
+      <nav aria-label="Plant library pages">
+        <ul class="pagination mb-0">
+          <li class="page-item disabled"><a class="page-link">Previous</a></li>
+          <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">8</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<!-- Form -->
+<section class="py-5">
+  <div class="container py-lg-4">
+    <div class="row g-4 g-lg-5 align-items-center">
+      <div class="col-lg-5">
+        <span class="eyebrow">Plant doctor</span>
+        <h2 class="display-6 mb-3">Something looking a little droopy?</h2>
+        <p class="text-body-secondary mb-4">Tell us what is going on and one of our horticulturists will reply within a day, usually with a fix you can try tonight.</p>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-2"><strong>Average reply:</strong> 3 hours</li>
+          <li class="mb-2"><strong>Cases solved last month:</strong> 1,180</li>
+          <li><strong>Email:</strong> doctor@fernhollow.example</li>
+        </ul>
+      </div>
+      <div class="col-lg-7">
+        <div class="card border-0 shadow">
+          <div class="card-body p-4 p-lg-5">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label">Your name</label>
+                <input type="text" class="form-control" id="name" placeholder="Robin Ashdown">
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+              </div>
+              <div class="col-12">
+                <label for="plant" class="form-label">Which plant?</label>
+                <select id="plant" class="form-select">
+                  <option selected>Choose from your boxes&hellip;</option>
+                  <option>Golden pothos</option>
+                  <option>Calathea orbifolia</option>
+                  <option>Snake plant</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label">What are you seeing?</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Yellow leaves near the base, soil still damp after a week&hellip;"></textarea>
+                <div class="form-text">Photos help. You can attach them after we reply.</div>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="tips" checked>
+                  <label class="form-check-label" for="tips">Email me seasonal care tips</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="member">
+                  <label class="form-check-label" for="member">I&rsquo;m already a Fernhollow member</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary btn-lg px-4">Send to the plant doctor</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer pt-5 pb-4">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <a class="d-flex align-items-center gap-2 mb-3 text-white fs-4 fw-bold" href="#" style="font-family: Fraunces, Georgia, serif;">
+          <img src="img/logo.svg" alt="" width="32" height="32"> Fernhollow
+        </a>
+        <p class="small mb-0">Nursery-grown houseplants, delivered monthly from our greenhouses in the valley. Grown slowly, packed carefully.</p>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1">
+        <h6 class="mb-3">Shop</h6>
+        <ul class="list-unstyled small mb-0">
+          <li class="mb-2"><a href="#">Subscriptions</a></li>
+          <li class="mb-2"><a href="#">Plant library</a></li>
+          <li class="mb-2"><a href="#">Pots &amp; tools</a></li>
+          <li><a href="#">Gift cards</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mb-3">Company</h6>
+        <ul class="list-unstyled small mb-0">
+          <li class="mb-2"><a href="#">Our growers</a></li>
+          <li class="mb-2"><a href="#">Journal</a></li>
+          <li class="mb-2"><a href="#">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h6 class="mb-3">Visit the greenhouse</h6>
+        <p class="small mb-1">14 Orchard Lane, Millbrook Valley</p>
+        <p class="small mb-0">Open Saturdays, 9am&ndash;3pm</p>
+      </div>
+    </div>
+    <hr class="border-secondary my-4">
+    <div class="d-flex flex-wrap justify-content-between gap-2 small">
+      <span>&copy; 2026 Fernhollow Plant Co. All rights reserved.</span>
+      <span><a href="#">Privacy</a> &middot; <a href="#">Terms</a> &middot; <a href="#">Shipping</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

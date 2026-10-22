@@ -1,0 +1,32 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Acme Landing</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; font-family: "Helvetica Neue", Arial, sans-serif; color:#1f2937; background:#ffffff; }
+  header { background:#0f172a; }
+  .wrap { max-width:1140px; margin:0 auto; padding:0 20px; }
+  header .wrap { display:flex; justify-content:space-between; align-items:center; height:72px; }
+  .logo { color:#fff; font-weight:700; font-size:22px; }
+  nav { display:flex; gap:28px; }
+  nav a { color:#cbd5e1; text-decoration:none; font-size:15px; }
+  .hero { background:linear-gradient(90deg, #4f46e5, #06b6d4); padding:96px 0; text-align:center; color:#fff; }
+  .hero h1 { font-family: Poppins, sans-serif; font-size:56px; line-height:64px; margin:0 0 16px; font-weight:800; letter-spacing:-1px; }
+  .hero p { font-size:20px; margin:0 0 32px; color:#e0e7ff; }
+  .btn { display:inline-block; background:#f59e0b; color:#111827; padding:14px 28px; border-radius:8px; font-weight:600; text-decoration:none; }
+  .features .wrap { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; padding:80px 20px; }
+  .card { background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:28px; box-shadow:0 4px 12px rgba(0,0,0,0.08); }
+  .card h3 { margin:0 0 8px; font-size:22px; color:#0f172a; }
+  .card p { margin:0; font-size:16px; line-height:26px; color:#475569; }
+  .card img { width:48px; height:48px; border-radius:50%; margin-bottom:16px; display:block; }
+  footer { border-top:1px solid #e2e8f0; padding:24px 0; font-size:14px; color:#64748b; text-align:center; }
+</style></head>
+<body>
+<header><div class="wrap"><div class="logo">Acme</div><nav><a href="#">Product</a><a href="#">Pricing</a><a href="#">Contact</a></nav></div></header>
+<section class="hero"><div class="wrap"><h1>Build faster with Acme</h1><p>Everything you need to launch, in one place.</p><a class="btn" href="/signup">Get started</a></div></section>
+<section class="features"><div class="wrap">
+  <div class="card"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Crect width='48' height='48' fill='%234f46e5'/%3E%3C/svg%3E" alt="fast"><h3>Fast</h3><p>Pages load in a blink on every device.</p></div>
+  <div class="card"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Crect width='48' height='48' fill='%2306b6d4'/%3E%3C/svg%3E" alt="safe"><h3>Secure</h3><p>Built-in protection for <strong>your data</strong>.</p></div>
+  <div class="card"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Crect width='48' height='48' fill='%23f59e0b'/%3E%3C/svg%3E" alt="scale"><h3>Scalable</h3><p>Grows with your team from one to one thousand.</p></div>
+</div></section>
+<footer>© 2026 Acme Inc. All rights reserved.</footer>
+</body></html>
